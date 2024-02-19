@@ -14,7 +14,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/shantanu-hashcash/go/clients/stellarcore"
+	"github.com/shantanu-hashcash/go/clients/hcnetcore"
 	"github.com/shantanu-hashcash/go/historyarchive"
 	"github.com/shantanu-hashcash/go/ingest/ledgerbackend"
 	supporthttp "github.com/shantanu-hashcash/go/support/http"

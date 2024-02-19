@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/shantanu-hashcash/go/clients/stellarcore"
-	proto "github.com/shantanu-hashcash/go/protocols/stellarcore"
+	"github.com/shantanu-hashcash/go/clients/hcnetcore"
+	proto "github.com/shantanu-hashcash/go/protocols/hcnetcore"
 	"github.com/shantanu-hashcash/go/support/logmetrics"
 	"github.com/shantanu-hashcash/go/xdr"
 
