@@ -14,9 +14,9 @@ type Config struct {
 
 	Strict bool
 
-	StellarCoreURL         string
+	HcnetCoreURL         string
 	CaptiveCoreStoragePath string
-	StellarCoreBinaryPath  string
+	HcnetCoreBinaryPath  string
 	CaptiveCoreConfigPath  string
 	CaptiveCoreHTTPPort    uint
 

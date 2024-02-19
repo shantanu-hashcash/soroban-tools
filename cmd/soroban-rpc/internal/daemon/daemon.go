@@ -119,7 +119,7 @@ func newCaptiveCore(cfg *config.Config, logger *supportlog.Entry) (*ledgerbacken
 		NetworkPassphrase:   cfg.NetworkPassphrase,
 		HistoryArchiveURLs:  cfg.HistoryArchiveURLs,
 		CheckpointFrequency: cfg.CheckpointFrequency,
-		Log:                 logger.WithField("subservice", "stellar-core"),
+		Log:                 logger.WithField("subservice", "hcnet-core"),
 		Toml:                captiveCoreToml,
 		UserAgent:           "captivecore",
 		UseDB:               true,
