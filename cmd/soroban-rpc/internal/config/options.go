@@ -54,13 +54,13 @@ func (cfg *Config) options() ConfigOptions {
 		{
 			Name:      "stellar-core-url",
 			Usage:     "URL used to query Stellar Core (local captive core by default)",
-			ConfigKey: &cfg.StellarCoreURL,
+			ConfigKey: &cfg.HcnetCoreURL,
 			Validate: func(co *ConfigOption) error {
 				// This is a bit awkward. We're actually setting a default, but we
 				// can't do that until the config is fully parsed, so we do it as a
 				// validator here.
-				if cfg.StellarCoreURL == "" {
-					cfg.StellarCoreURL = fmt.Sprintf("http://localhost:%d", cfg.CaptiveCoreHTTPPort)
+				if cfg.HcnetCoreURL == "" {
+					cfg.HcnetCoreURL = fmt.Sprintf("http://localhost:%d", cfg.CaptiveCoreHTTPPort)
 				}
 				return nil
 			},
@@ -134,10 +134,10 @@ func (cfg *Config) options() ConfigOptions {
 			},
 		},
 		{
-			Name:         "stellar-core-binary-path",
+			Name:         "hcnet-core-binary-path",
 			Usage:        "path to stellar core binary",
-			ConfigKey:    &cfg.StellarCoreBinaryPath,
-			DefaultValue: defaultStellarCoreBinaryPath,
+			ConfigKey:    &cfg.HcnetCoreBinaryPath,
+			DefaultValue: defaultHcnetCoreBinaryPath,
 			Validate:     required,
 		},
 		{
