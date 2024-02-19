@@ -54,7 +54,7 @@ type CoreClientWithMetrics struct {
 	opCountMetric *prometheus.SummaryVec
 }
 
-func newCoreClientWithMetrics(client stellarcore.Client, registry *prometheus.Registry) *CoreClientWithMetrics {
+func newCoreClientWithMetrics(client hcnetcore.Client, registry *prometheus.Registry) *CoreClientWithMetrics {
 	submitMetric := prometheus.NewSummaryVec(prometheus.SummaryOpts{
 		Namespace: prometheusNamespace, Subsystem: "txsub", Name: "submission_duration_seconds",
 		Help:       "submission durations to Stellar-Core, sliding window = 10m",
