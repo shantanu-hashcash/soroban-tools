@@ -23,7 +23,7 @@ func (cfg *Config) options() ConfigOptions {
 	if cfg.optionsCache != nil {
 		return *cfg.optionsCache
 	}
-	defaultStellarCoreBinaryPath, _ := exec.LookPath("stellar-core")
+	defaultHcnetCoreBinaryPath, _ := exec.LookPath("stellar-core")
 	cfg.optionsCache = &ConfigOptions{
 		{
 			Name:      "config-path",

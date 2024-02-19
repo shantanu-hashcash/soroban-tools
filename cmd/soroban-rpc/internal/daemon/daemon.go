@@ -40,7 +40,7 @@ const (
 )
 
 type Daemon struct {
-	core                *ledgerbackend.Captivehcnetcore
+	core                *ledgerbackend.CaptiveHcnetcore
 	coreClient          *CoreClientWithMetrics
 	ingestService       *ingest.Service
 	db                  *db.DB
@@ -99,7 +99,7 @@ func (d *Daemon) Close() error {
 }
 
 // newCaptiveCore creates a new captive core backend instance and returns it.
-func newCaptiveCore(cfg *config.Config, logger *supportlog.Entry) (*ledgerbackend.Captivehcnetcore, error) {
+func newCaptiveCore(cfg *config.Config, logger *supportlog.Entry) (*ledgerbackend.CaptiveHcnetcore, error) {
 	captiveCoreTomlParams := ledgerbackend.CaptiveCoreTomlParams{
 		HTTPPort:                       &cfg.CaptiveCoreHTTPPort,
 		HistoryArchiveURLs:             cfg.HistoryArchiveURLs,
@@ -114,7 +114,7 @@ func newCaptiveCore(cfg *config.Config, logger *supportlog.Entry) (*ledgerbacken
 	}
 
 	captiveConfig := ledgerbackend.CaptiveCoreConfig{
-		BinaryPath:          cfg.hcnetcoreBinaryPath,
+		BinaryPath:          cfg.HcnetcoreBinaryPath,
 		StoragePath:         cfg.CaptiveCoreStoragePath,
 		NetworkPassphrase:   cfg.NetworkPassphrase,
 		HistoryArchiveURLs:  cfg.HistoryArchiveURLs,
@@ -167,7 +167,7 @@ func MustNew(cfg *config.Config) *Daemon {
 		done:            make(chan struct{}),
 		metricsRegistry: metricsRegistry,
 		coreClient: newCoreClientWithMetrics(hcnetcore.Client{
-			URL:  cfg.hcnetcoreURL,
+			URL:  cfg.HcnetcoreURL,
 			HTTP: &http.Client{Timeout: cfg.CoreRequestTimeout},
 		}, metricsRegistry),
 	}

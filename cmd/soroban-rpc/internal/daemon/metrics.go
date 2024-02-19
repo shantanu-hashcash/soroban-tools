@@ -49,7 +49,7 @@ func (d *Daemon) MetricsNamespace() string {
 }
 
 type CoreClientWithMetrics struct {
-	stellarcore.Client
+	hcnetcore.Client
 	submitMetric  *prometheus.SummaryVec
 	opCountMetric *prometheus.SummaryVec
 }
