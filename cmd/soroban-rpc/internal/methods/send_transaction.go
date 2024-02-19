@@ -7,7 +7,7 @@ import (
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/handler"
 	"github.com/shantanu-hashcash/go/network"
-	proto "github.com/shantanu-hashcash/go/protocols/stellarcore"
+	proto "github.com/shantanu-hashcash/go/protocols/hcnetcore"
 	"github.com/shantanu-hashcash/go/support/log"
 	"github.com/shantanu-hashcash/go/xdr"
 
