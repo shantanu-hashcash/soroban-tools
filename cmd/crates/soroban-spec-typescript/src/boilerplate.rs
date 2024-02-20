@@ -12,7 +12,7 @@ use super::generate;
 
 static PROJECT_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/src/project_template");
 
-const NETWORK_PASSPHRASE_TESTNET: &str = "Test SDF Network ; September 2015";
+const NETWORK_PASSPHRASE_TESTNET: &str = "HcNet20";
 const NETWORK_PASSPHRASE_FUTURENET: &str = "Test SDF Future Network ; October 2022";
 const NETWORK_PASSPHRASE_STANDALONE: &str = "Standalone Network ; February 2017";
 
