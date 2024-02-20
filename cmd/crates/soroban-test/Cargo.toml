@@ -24,7 +24,7 @@ soroban-ledger-snapshot = { workspace = true }
 stellar-strkey = { workspace = true }
 soroban-sdk = { workspace = true }
 sep5 = { workspace = true }
-soroban-cli-hcnet-test2 = { workspace = true }
+soroban-cli-hcnet-test3 = { workspace = true }
 
 thiserror = "1.0.31"
 sha2 = "0.10.6"

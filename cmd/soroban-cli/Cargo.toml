@@ -1,5 +1,5 @@
 [package]
-name = "soroban-cli-hcnet-test2"
+name = "soroban-cli-hcnet-test3"
 description = "Soroban CLI"
 homepage = "https://github.com/shantanu-hashcash/soroban-cli"
 repository = "https://github.com/shantanu-hashcash/soroban-cli"

@@ -57,7 +57,7 @@ version = "=20.0.3"
 git = "https://github.com/stellar/rs-soroban-sdk"
 rev = "93b09e42e4efa841cbd034c0bff0dc362765086c"
 
-[workspace.dependencies.soroban-cli-hcnet-test2]
+[workspace.dependencies.soroban-cli-hcnet-test3]
 version = "20.1.1"
 path = "cmd/soroban-cli"
 
