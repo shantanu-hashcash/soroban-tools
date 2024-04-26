@@ -1,4 +1,4 @@
-module github.com/shantanu-hashcash/soroban-cli
+module github.com/shantanu-hashcash/soroban-tools
 
 go 1.22.0
 
