@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src/*",
+    "postinstall": "./initialize.sh",
+    "test": "npm run lint && ava"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^4.1.0",
+    "@types/node": "^20.4.9",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "ava": "^5.3.1",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.53.0",
+    "hcnet-sdk": "11.0.1",
+    "typescript": "^5.1.6"
+  },
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "build/"
+      },
+      "compile": "tsc"
+    },
+    "require": [
+      "dotenv/config"
+    ]
+  }
+}
