@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/xdr"
 )
 
 func getLedgerEntryAndLatestLedgerSequenceWithErr(db *DB, key xdr.LedgerKey) (bool, xdr.LedgerEntry, uint32, *uint32, error) {

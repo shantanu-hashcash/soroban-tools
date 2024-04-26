@@ -10,11 +10,11 @@ import (
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/handler"
 
-	"github.com/hcnet/go/strkey"
-	"github.com/hcnet/go/support/errors"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/strkey"
+	"github.com/shantanu-hashcash/go/support/errors"
+	"github.com/shantanu-hashcash/go/xdr"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/events"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/events"
 )
 
 type eventTypeSet map[string]interface{}

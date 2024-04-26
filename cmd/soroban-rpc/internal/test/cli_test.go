@@ -13,15 +13,15 @@ import (
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/jhttp"
 	"github.com/google/shlex"
-	"github.com/hcnet/go/keypair"
-	"github.com/hcnet/go/strkey"
-	"github.com/hcnet/go/txnbuild"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/keypair"
+	"github.com/shantanu-hashcash/go/strkey"
+	"github.com/shantanu-hashcash/go/txnbuild"
+	"github.com/shantanu-hashcash/go/xdr"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gotest.tools/v3/icmd"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/methods"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/methods"
 )
 
 func cargoTest(t *testing.T, name string) {

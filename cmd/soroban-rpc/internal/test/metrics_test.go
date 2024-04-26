@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/config"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/config"
 )
 
 func TestMetrics(t *testing.T) {

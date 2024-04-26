@@ -17,7 +17,7 @@ NETWORK_STATUS=$(curl -s -X POST "http://localhost:8000/soroban/rpc" -H "Content
 echo "  Status:     $NETWORK_STATUS"
 
 # Print command before executing, from https://stackoverflow.com/a/23342259/249801
-# Discussion: https://github.com/hcnet/soroban-tools/pull/1034#pullrequestreview-1690667116
+# Discussion: https://github.com/shantanu-hashcash/soroban-tools/pull/1034#pullrequestreview-1690667116
 exe() { echo"${@/eval/}" ; "$@" ; }
 
 function fund_all() {

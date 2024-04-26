@@ -5,10 +5,10 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	goxdr "github.com/hcnet/go/xdr"
+	goxdr "github.com/shantanu-hashcash/go/xdr"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/config"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/daemon"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/config"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/daemon"
 )
 
 func main() {

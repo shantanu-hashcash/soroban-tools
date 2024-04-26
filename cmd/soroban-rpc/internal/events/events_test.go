@@ -3,11 +3,11 @@ package events
 import (
 	"testing"
 
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/xdr"
 	"github.com/stretchr/testify/require"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/ledgerbucketwindow"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/ledgerbucketwindow"
 )
 
 var (

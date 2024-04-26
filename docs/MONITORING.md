@@ -36,8 +36,8 @@ Follow these best practices to maintain a stable and performant soroban-rpc depl
 
 3. **Load Testing**: Regularly conduct load testing to assess the server's performance under varying workloads. Use this data to adjust limits and execution times as needed.
 
-4. **Scaling Strategies**: Plan scaling strategies for both vertical and horizontal scaling. Vertical scaling involves upgrading hardware resources like CPU, memory, and disk, while
-   horizontal scaling uses HTTP-aware load balancers to distribute the load across multiple machines.
+4. **Scaling Strategies**: Plan scaling strategies for both vertical and auroratal scaling. Vertical scaling involves upgrading hardware resources like CPU, memory, and disk, while
+   auroratal scaling uses HTTP-aware load balancers to distribute the load across multiple machines.
 
 ## Tuning Suggestions
 
@@ -49,7 +49,7 @@ When monitoring the resource utilization and identifying gradual increases in me
    - Add Memory: Sufficient memory helps reduce disk I/O and can optimize processing times.
    - Use Faster Disk: SSDs or faster disk technologies can significantly improve I/O performance.
 
-2. **Horizontal Tuning**:
+2. **Auroratal Tuning**:
 
    - Employ HTTP-Aware Load Balancers: Use load balancers that are aware of HTTP error codes and response times. This enables effective distribution of requests across multiple instances
      while considering their respective loads and response times.

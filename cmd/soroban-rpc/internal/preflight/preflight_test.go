@@ -8,11 +8,11 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/hcnet/go/support/log"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/support/log"
+	"github.com/shantanu-hashcash/go/xdr"
 	"github.com/stretchr/testify/require"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/db"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/db"
 )
 
 var mockContractID = xdr.Hash{0xa, 0xb, 0xc}

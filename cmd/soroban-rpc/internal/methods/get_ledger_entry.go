@@ -7,20 +7,20 @@ import (
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/handler"
 
-	"github.com/hcnet/go/support/log"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/support/log"
+	"github.com/shantanu-hashcash/go/xdr"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/db"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/db"
 )
 
 // Deprecated. Use GetLedgerEntriesRequest instead.
-// TODO(https://github.com/hcnet/soroban-tools/issues/374) remove after getLedgerEntries is deployed.
+// TODO(https://github.com/shantanu-hashcash/soroban-tools/issues/374) remove after getLedgerEntries is deployed.
 type GetLedgerEntryRequest struct {
 	Key string `json:"key"`
 }
 
 // Deprecated. Use GetLedgerEntriesResponse instead.
-// TODO(https://github.com/hcnet/soroban-tools/issues/374) remove after getLedgerEntries is deployed.
+// TODO(https://github.com/shantanu-hashcash/soroban-tools/issues/374) remove after getLedgerEntries is deployed.
 type GetLedgerEntryResponse struct {
 	XDR                string `json:"xdr"`
 	LastModifiedLedger uint32 `json:"lastModifiedLedgerSeq"`
@@ -31,7 +31,7 @@ type GetLedgerEntryResponse struct {
 
 // NewGetLedgerEntryHandler returns a json rpc handler to retrieve the specified ledger entry from hcnet core
 // Deprecated. use NewGetLedgerEntriesHandler instead.
-// TODO(https://github.com/hcnet/soroban-tools/issues/374) remove after getLedgerEntries is deployed.
+// TODO(https://github.com/shantanu-hashcash/soroban-tools/issues/374) remove after getLedgerEntries is deployed.
 func NewGetLedgerEntryHandler(logger *log.Entry, ledgerEntryReader db.LedgerEntryReader) jrpc2.Handler {
 	return handler.New(func(ctx context.Context, request GetLedgerEntryRequest) (GetLedgerEntryResponse, error) {
 		var key xdr.LedgerKey

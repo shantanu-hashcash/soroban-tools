@@ -6,7 +6,7 @@ import (
 
 	sq "github.com/Masterminds/squirrel"
 
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/xdr"
 )
 
 const (

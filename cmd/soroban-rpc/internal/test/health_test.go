@@ -6,7 +6,7 @@ import (
 
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/jhttp"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/methods"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/methods"
 	"github.com/stretchr/testify/assert"
 )
 

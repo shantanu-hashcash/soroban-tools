@@ -26,7 +26,7 @@ But you don't need to publish this library to NPM to use it. You can add it to y
 }
 ```
 
-However, we've actually encountered [frustration](https://github.com/hcnet/soroban-example-dapp/pull/117#discussion_r1232873560) using local libraries with NPM in this way. Though it seems a bit messy, we suggest generating the library directly to your `node_modules` folder automatically after each install by using a `postinstall` script. We've had the least trouble with this approach. NPM will automatically remove what it sees as erroneous directories during the `install` step, and then regenerate them when it gets to your `postinstall` step, which will keep the library up-to-date with your contract.
+However, we've actually encountered [frustration](https://github.com/shantanu-hashcash/soroban-example-dapp/pull/117#discussion_r1232873560) using local libraries with NPM in this way. Though it seems a bit messy, we suggest generating the library directly to your `node_modules` folder automatically after each install by using a `postinstall` script. We've had the least trouble with this approach. NPM will automatically remove what it sees as erroneous directories during the `install` step, and then regenerate them when it gets to your `postinstall` step, which will keep the library up-to-date with your contract.
 
 ```json
 "scripts": {

@@ -9,19 +9,19 @@ import (
 
 	"github.com/cenkalti/backoff/v4"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/hcnet/go/historyarchive"
-	"github.com/hcnet/go/ingest"
-	backends "github.com/hcnet/go/ingest/ledgerbackend"
-	supportdb "github.com/hcnet/go/support/db"
-	"github.com/hcnet/go/support/log"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/historyarchive"
+	"github.com/shantanu-hashcash/go/ingest"
+	backends "github.com/shantanu-hashcash/go/ingest/ledgerbackend"
+	supportdb "github.com/shantanu-hashcash/go/support/db"
+	"github.com/shantanu-hashcash/go/support/log"
+	"github.com/shantanu-hashcash/go/xdr"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/db"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/util"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/db"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/util"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/events"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/transactions"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/events"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/transactions"
 )
 
 const (

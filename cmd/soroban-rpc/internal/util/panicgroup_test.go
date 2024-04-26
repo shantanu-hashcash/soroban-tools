@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"github.com/hcnet/go/support/log"
+	"github.com/shantanu-hashcash/go/support/log"
 	"github.com/stretchr/testify/require"
 )
 

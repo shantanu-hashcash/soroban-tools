@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/hcnet/go/support/log"
+	"github.com/shantanu-hashcash/go/support/log"
 )
 
 var UnrecoverablePanicGroup = panicGroup{

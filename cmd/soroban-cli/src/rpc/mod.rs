@@ -342,7 +342,7 @@ pub struct GetEventsResponse {
 // [API
 // Reference](https://docs.google.com/document/d/1TZUDgo_3zPz7TiPMMHVW_mtogjLyPL0plvzGMsxSz6A/edit#bookmark=id.35t97rnag3tx)
 // [Code
-// Reference](https://github.com/hcnet/soroban-tools/blob/bac1be79e8c2590c9c35ad8a0168aab0ae2b4171/cmd/soroban-rpc/internal/methods/get_events.go#L182-L203)
+// Reference](https://github.com/shantanu-hashcash/soroban-tools/blob/bac1be79e8c2590c9c35ad8a0168aab0ae2b4171/cmd/soroban-rpc/internal/methods/get_events.go#L182-L203)
 pub fn does_topic_match(topic: &[String], filter: &[String]) -> bool {
     filter.len() == topic.len()
         && filter
@@ -1004,7 +1004,7 @@ mod tests {
 
     #[test]
     // Taken from [RPC server
-    // tests](https://github.com/hcnet/soroban-tools/blob/main/cmd/soroban-rpc/internal/methods/get_events_test.go#L21).
+    // tests](https://github.com/shantanu-hashcash/soroban-tools/blob/main/cmd/soroban-rpc/internal/methods/get_events_test.go#L21).
     fn test_does_topic_match() {
         struct TestCase<'a> {
             name: &'a str,

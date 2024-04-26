@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/spf13/pflag"
-	"github.com/hcnet/go/support/errors"
-	"github.com/hcnet/go/support/strutils"
+	"github.com/shantanu-hashcash/go/support/errors"
+	"github.com/shantanu-hashcash/go/support/strutils"
 )
 
 // ConfigOptions is a group of ConfigOptions that can be for convenience

@@ -14,10 +14,10 @@ ifeq ($(strip $(REPOSITORY_VERSION)),)
 endif  
 REPOSITORY_BRANCH := "$(shell git rev-parse --abbrev-ref HEAD)"
 BUILD_TIMESTAMP ?= $(shell date '+%Y-%m-%dT%H:%M:%S')
-GOLDFLAGS :=	-X 'github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/config.Version=${REPOSITORY_VERSION}' \
-				-X 'github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/config.CommitHash=${REPOSITORY_COMMIT_HASH}' \
-				-X 'github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/config.BuildTimestamp=${BUILD_TIMESTAMP}' \
-				-X 'github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/config.Branch=${REPOSITORY_BRANCH}'
+GOLDFLAGS :=	-X 'github.com/shantanu-hashcash/soroban-cli/cmd/soroban-rpc/internal/config.Version=${REPOSITORY_VERSION}' \
+				-X 'github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/config.CommitHash=${REPOSITORY_COMMIT_HASH}' \
+				-X 'github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/config.BuildTimestamp=${BUILD_TIMESTAMP}' \
+				-X 'github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/config.Branch=${REPOSITORY_BRANCH}'
 
 
 # The following works around incompatibility between the rust and the go linkers -
@@ -89,7 +89,7 @@ publish:
 	cargo workspaces publish --all --force '*' --from-git --yes
 
 # the build-soroban-rpc build target is an optimized build target used by 
-# https://github.com/hcnet/pipelines/hcnet-horizon/Jenkinsfile-soroban-rpc-package-builder
+# https://github.com/shantanu-hashcash/pipelines/hcnet-aurora/Jenkinsfile-soroban-rpc-package-builder
 # as part of the package building.
 build-soroban-rpc: build-libpreflight
 	go build -ldflags="${GOLDFLAGS}" ${MACOS_MIN_VER} -o soroban-rpc -trimpath -v ./cmd/soroban-rpc

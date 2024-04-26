@@ -90,13 +90,13 @@ hcnet-strkey="0.0.7"
 wasmparser = "0.90.0"
 
 
-# [patch."https://github.com/hcnet/rs-soroban-env"]
+# [patch."https://github.com/shantanu-hashcash/rs-soroban-env"]
 # soroban-env-host = { path = "../rs-soroban-env/soroban-env-host/" }
-# [patch."https://github.com/hcnet/rs-soroban-sdk"]
+# [patch."https://github.com/shantanu-hashcash/rs-soroban-sdk"]
 # soroban-spec = { path = "../rs-soroban-sdk/soroban-spec/" }
 # soroban-token-spec = { path = "../rs-soroban-sdk/soroban-token-spec/" }
 # soroban-sdk = { path = "../rs-soroban-sdk/soroban-sdk/" }
-# [patch."https://github.com/hcnet/rs-hcnet-xdr"]
+# [patch."https://github.com/shantanu-hashcash/rs-hcnet-xdr"]
 # hcnet-xdr = { path = "../rs-hcnet-xdr/" }
 
 [profile.test-wasms]

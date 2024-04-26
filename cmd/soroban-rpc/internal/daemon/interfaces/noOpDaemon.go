@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/prometheus/client_golang/prometheus"
-	proto "github.com/hcnet/go/protocols/hcnetcore"
+	proto "github.com/shantanu-hashcash/go/protocols/hcnetcore"
 )
 
 // The noOpDeamon is a dummy daemon implementation, supporting the Daemon interface.

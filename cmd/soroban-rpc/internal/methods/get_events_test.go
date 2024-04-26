@@ -9,13 +9,13 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/hcnet/go/keypair"
-	"github.com/hcnet/go/network"
-	"github.com/hcnet/go/strkey"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/keypair"
+	"github.com/shantanu-hashcash/go/network"
+	"github.com/shantanu-hashcash/go/strkey"
+	"github.com/shantanu-hashcash/go/xdr"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/events"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/events"
 )
 
 func TestEventTypeSetMatches(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 	"github.com/creachadair/jrpc2"
 	"github.com/creachadair/jrpc2/handler"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/transactions"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/transactions"
 )
 
 type HealthCheckResult struct {

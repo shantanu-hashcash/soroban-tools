@@ -15,11 +15,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/hcnet/go/keypair"
-	"github.com/hcnet/go/txnbuild"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/keypair"
+	"github.com/shantanu-hashcash/go/txnbuild"
+	"github.com/shantanu-hashcash/go/xdr"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/methods"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/methods"
 )
 
 var (

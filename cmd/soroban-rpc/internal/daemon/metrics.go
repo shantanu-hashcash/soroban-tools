@@ -6,13 +6,13 @@ import (
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/hcnet/go/clients/hcnetcore"
-	proto "github.com/hcnet/go/protocols/hcnetcore"
-	"github.com/hcnet/go/support/logmetrics"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/clients/hcnetcore"
+	proto "github.com/shantanu-hashcash/go/protocols/hcnetcore"
+	"github.com/shantanu-hashcash/go/support/logmetrics"
+	"github.com/shantanu-hashcash/go/xdr"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/config"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/config"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
 )
 
 func (d *Daemon) registerMetrics() {

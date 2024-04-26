@@ -1,7 +1,7 @@
 /// A barebones implementation of Total Order IDs (TOIDs) from
 /// [SEP-35](https://hcnet.org/protocol/sep-35), using the reference
 /// implementation from the Go
-/// [`hcnet/go/toid`](https://github.com/hcnet/go/blob/b4ba6f8e67f274bf84d21b0effb01ea8a914b766/toid/main.go#L8-L56)
+/// [`hcnet/go/toid`](https://github.com/shantanu-hashcash/go/blob/b4ba6f8e67f274bf84d21b0effb01ea8a914b766/toid/main.go#L8-L56)
 /// package.
 #[derive(Copy, Clone)]
 pub struct Toid {

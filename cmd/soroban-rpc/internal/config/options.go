@@ -10,11 +10,11 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/hcnet/go/network"
-	"github.com/hcnet/go/support/errors"
-	"github.com/hcnet/go/support/strutils"
+	"github.com/shantanu-hashcash/go/network"
+	"github.com/shantanu-hashcash/go/support/errors"
+	"github.com/shantanu-hashcash/go/support/strutils"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/ledgerbucketwindow"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/ledgerbucketwindow"
 )
 
 const defaultHTTPEndpoint = "localhost:8000"

@@ -20,7 +20,7 @@ if [ "$1" = "standalone" ]; then
   rm -rf ./history
   hcnet-core new-hist vs
 
-  # serve history archives to horizon on port 1570
+  # serve history archives to aurora on port 1570
   pushd ./history/vs/
   python3 -m http.server 1570 &
   popd

@@ -3,10 +3,10 @@ package ingest
 import (
 	"context"
 
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/xdr"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/db"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/db"
 )
 
 var (

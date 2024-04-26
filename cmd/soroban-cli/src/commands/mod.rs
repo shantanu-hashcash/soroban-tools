@@ -15,7 +15,7 @@ pub const HEADING_RPC: &str = "Options (RPC)";
 const ABOUT: &str = "Build, deploy, & interact with contracts; set identities to sign with; configure networks; generate keys; and more.
 
 Intro: https://soroban.hcnet.org
-CLI Reference: https://github.com/hcnet/soroban-tools/tree/main/docs/soroban-cli-full-docs.md";
+CLI Reference: https://github.com/shantanu-hashcash/soroban-tools/tree/main/docs/soroban-cli-full-docs.md";
 
 // long_about is shown when someone uses `--help`; short help when using `-h`
 const LONG_ABOUT: &str = "
@@ -40,7 +40,7 @@ Anything after the `--` double dash (the \"slop\") is parsed as arguments to the
     soroban contract invoke --id CCR6QKTWZQYW6YUJ7UP7XXZRLWQPFRV6SWBLQS4ZQOSAF4BOUD77OTE2 --source alice --network testnet -- \
                             hello --to world
 
-Full CLI reference: https://github.com/hcnet/soroban-tools/tree/main/docs/soroban-cli-full-docs.md";
+Full CLI reference: https://github.com/shantanu-hashcash/soroban-tools/tree/main/docs/soroban-cli-full-docs.md";
 
 #[derive(Parser, Debug)]
 #[command(

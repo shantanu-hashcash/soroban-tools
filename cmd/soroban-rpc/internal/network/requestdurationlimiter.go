@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/creachadair/jrpc2"
-	"github.com/hcnet/go/support/log"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/util"
+	"github.com/shantanu-hashcash/go/support/log"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/util"
 )
 
 const maxUint = ^uint64(0)         //18446744073709551615

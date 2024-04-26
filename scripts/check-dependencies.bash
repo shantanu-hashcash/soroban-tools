@@ -24,10 +24,10 @@ if ! CARGO_OUTPUT=$(cargo tree -p soroban-env-host 2>&1); then
 fi
 
 
-# revision of the https://github.com/hcnet/rs-hcnet-xdr library used by the Rust code
+# revision of the https://github.com/shantanu-hashcash/rs-hcnet-xdr library used by the Rust code
 RS_HCNET_XDR_REVISION=""
 
-# revision of https://github.com/hcnet/hcnet-xdr/ used by the Rust code
+# revision of https://github.com/shantanu-hashcash/hcnet-xdr/ used by the Rust code
 HCNET_XDR_REVISION_FROM_RUST=""
 
 function hcnet_xdr_version_from_rust_dep_tree {
@@ -64,13 +64,13 @@ fi
 
 # Now, lets compare the Rust and Go XDR revisions
 # TODO: The sed extraction below won't work for version tags
-GO_XDR_REVISION=$(go list -m -f '{{.Version}}' github.com/hcnet/go | $SED 's/.*-\(.*\)/\1/')
+GO_XDR_REVISION=$(go list -m -f '{{.Version}}' github.com/shantanu-hashcash/go | $SED 's/.*-\(.*\)/\1/')
 
-# revision of https://github.com/hcnet/hcnet-xdr/ used by the Go code
+# revision of https://github.com/shantanu-hashcash/hcnet-xdr/ used by the Go code
 HCNET_XDR_REVISION_FROM_GO=$($CURL https://raw.githubusercontent.com/hcnet/go/${GO_XDR_REVISION}/xdr/xdr_commit_generated.txt)
 
 if [ "$HCNET_XDR_REVISION_FROM_GO" != "$HCNET_XDR_REVISION_FROM_RUST" ]; then
-  echo "Go and Rust dependencies are using different revisions of https://github.com/hcnet/hcnet-xdr"
+  echo "Go and Rust dependencies are using different revisions of https://github.com/shantanu-hashcash/hcnet-xdr"
   echo
   echo "Rust dependencies are using commit $HCNET_XDR_REVISION_FROM_RUST"
   echo "Go dependencies are using commit $HCNET_XDR_REVISION_FROM_GO"
@@ -92,7 +92,7 @@ if [ "$CORE_CONTAINER_REVISION" != "$CAPTIVE_CORE_PKG_REVISION" ]; then
   exit 1
 fi
 
-# Revision of https://github.com/hcnet/rs-hcnet-xdr by Core.
+# Revision of https://github.com/shantanu-hashcash/rs-hcnet-xdr by Core.
 # We obtain it from src/rust/src/host-dep-tree-curr.txt but Alternatively/in addition we could:
 #  * Check the rs-hcnet-xdr revision of host-dep-tree-prev.txt
 #  * Check the hcnet-xdr revision
@@ -101,7 +101,7 @@ CORE_HOST_DEP_TREE_CURR=$($CURL https://raw.githubusercontent.com/hcnet/hcnet-co
 
 RS_HCNET_XDR_REVISION_FROM_CORE=$(echo "$CORE_HOST_DEP_TREE_CURR" | hcnet_xdr_version_from_rust_dep_tree)
 if [ "$RS_HCNET_XDR_REVISION" != "$RS_HCNET_XDR_REVISION_FROM_CORE" ]; then
-  echo "The Core revision used in integration tests (${CORE_CONTAINER_REVISION}) uses a different revision of https://github.com/hcnet/rs-hcnet-xdr"
+  echo "The Core revision used in integration tests (${CORE_CONTAINER_REVISION}) uses a different revision of https://github.com/shantanu-hashcash/rs-hcnet-xdr"
   echo
   echo "Current repository's revision $RS_HCNET_XDR_REVISION"
   echo "Core's revision $RS_HCNET_XDR_REVISION_FROM_CORE"

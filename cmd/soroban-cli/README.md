@@ -1,6 +1,6 @@
 # soroban-cli
 
-CLI for running Soroban contracts locally in a test VM. Executes WASM files built using the [rs-soroban-sdk](https://github.com/hcnet/rs-soroban-sdk).
+CLI for running Soroban contracts locally in a test VM. Executes WASM files built using the [rs-soroban-sdk](https://github.com/shantanu-hashcash/rs-soroban-sdk).
 
 Soroban: https://soroban.hcnet.org
 

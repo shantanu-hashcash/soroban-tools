@@ -18,7 +18,7 @@ testnet release candidates from the [testing repository.](https://apt.hcnet.org/
 - The recommended option is to compile the core source directly on your machine:
     - Clone the hcnet-core repo:
         ```bash
-        git clone https://github.com/hcnet/hcnet-core.git
+        git clone https://github.com/shantanu-hashcash/hcnet-core.git
         cd hcnet-core
         ```
     - Fetch the tags and checkout the testnet release tag:
@@ -26,12 +26,12 @@ testnet release candidates from the [testing repository.](https://apt.hcnet.org/
         git fetch --tags
         git checkout tags/v20.0.0-rc.2.1 -b soroban-testnet-release
         ```
-    - Follow the build steps listed in [INSTALL.md](https://github.com/hcnet/hcnet-core/blob/master/INSTALL.md) file for the instructions on building the local binary
+    - Follow the build steps listed in [INSTALL.md](https://github.com/shantanu-hashcash/hcnet-core/blob/master/INSTALL.md) file for the instructions on building the local binary
 
 ## Building Soroban-RPC
 - Similar to hcnet-core, we will clone the soroban-tools repo and checkout the testnet release tag:
 ```bash
-git clone https://github.com/hcnet/soroban-tools.git
+git clone https://github.com/shantanu-hashcash/soroban-tools.git
 cd soroban-tools
 git fetch --tags
 git checkout tags/v20.0.0-rc4 -b soroban-testnet-release

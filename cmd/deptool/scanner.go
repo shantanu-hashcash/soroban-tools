@@ -130,7 +130,7 @@ func loadParseGoMod(dir string, dependencies *projectDependencies) {
 	}
 	// scan all the hcnet related required modules.
 	for _, require := range modFile.Require {
-		if !strings.Contains(require.Mod.Path, "github.com/hcnet") || require.Indirect {
+		if !strings.Contains(require.Mod.Path, "github.com/shantanu-hashcash") || require.Indirect {
 			continue
 		}
 		splittedVersion := strings.Split(require.Mod.Version, "-")

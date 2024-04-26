@@ -8,16 +8,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hcnet/go/ingest/ledgerbackend"
-	"github.com/hcnet/go/network"
-	supportlog "github.com/hcnet/go/support/log"
-	"github.com/hcnet/go/xdr"
+	"github.com/shantanu-hashcash/go/ingest/ledgerbackend"
+	"github.com/shantanu-hashcash/go/network"
+	supportlog "github.com/shantanu-hashcash/go/support/log"
+	"github.com/shantanu-hashcash/go/xdr"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/db"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/events"
-	"github.com/hcnet/soroban-tools/cmd/soroban-rpc/internal/transactions"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/daemon/interfaces"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/db"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/events"
+	"github.com/shantanu-hashcash/soroban-tools/cmd/soroban-rpc/internal/transactions"
 )
 
 type ErrorReadWriter struct {
