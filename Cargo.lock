@@ -1115,6 +1115,16 @@ checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
 
 [[package]]
 name = "hcnet-strkey"
+version = "0.0.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2beda62187f9506dbb5deead956f5ac1c57cb47587e88d00013e57630c664be4"
+dependencies = [
+ "base32",
+ "thiserror",
+]
+
+[[package]]
+name = "hcnet-strkey"
 version = "0.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f9ccacb9060c0b026017c9b2267ddb5f67d6566f7221be05fe2ec732be89f360"
@@ -1127,34 +1137,19 @@ dependencies = [
 [[package]]
 name = "hcnet-xdr"
 version = "20.0.22"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85ea49fea03bef6c819f2495f43bf39152502715b2eff916f8e48e4a2d6a4a6d"
+source = "git+https://github.com/shantanu-hashcash/rs-hcnet-xdr?rev=5f70a8bd2e74f252a39ec735245ab27b63b6b915#5f70a8bd2e74f252a39ec735245ab27b63b6b915"
 dependencies = [
+ "arbitrary",
  "base64 0.13.1",
  "clap",
  "crate-git-revision 0.0.6",
  "escape-bytes",
- "hcnet-strkey",
+ "hcnet-strkey 0.0.8",
  "hex",
  "serde",
  "serde_json",
  "serde_with",
  "thiserror",
-]
-
-[[package]]
-name = "hcnet-xdr"
-version = "20.0.22"
-source = "git+https://github.com/shantanu-hashcash/rs-hcnet-xdr?rev=5f70a8bd2e74f252a39ec735245ab27b63b6b915#5f70a8bd2e74f252a39ec735245ab27b63b6b915"
-dependencies = [
- "arbitrary",
- "base64 0.13.1",
- "crate-git-revision 0.0.6",
- "escape-bytes",
- "hcnet-strkey",
- "hex",
- "serde",
- "serde_with",
 ]
 
 [[package]]
@@ -1571,9 +1566,9 @@ checksum = "01cda141df6706de531b6c46c3a33ecca755538219bd484262fa09410c13539c"
 
 [[package]]
 name = "lock_api"
-version = "0.4.11"
+version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3c168f8615b12bc01f9c17e2eb0cc07dcae1940121185446edc3744920e8ef45"
+checksum = "07af8b9cdd281b7915f413fa73f29ebd5d55d0d3f0155584dade1ff18cea1b17"
 dependencies = [
  "autocfg",
  "scopeguard",
@@ -1794,9 +1789,9 @@ checksum = "b15813163c1d831bf4a13c3610c05c0d03b39feb07f7e09fa234dac9b15aaf39"
 
 [[package]]
 name = "parking_lot"
-version = "0.12.1"
+version = "0.12.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3742b2c103b9f06bc9fff0a37ff4912935851bee6d36f3c02bcc755bcfec228f"
+checksum = "7e4af0ca4f6caed20e900d564c242b8e5d4903fdacf31d3daf527b66fe6f42fb"
 dependencies = [
  "lock_api",
  "parking_lot_core",
@@ -1804,15 +1799,15 @@ dependencies = [
 
 [[package]]
 name = "parking_lot_core"
-version = "0.9.9"
+version = "0.9.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4c42a9226546d68acdd9c0a280d17ce19bfe27a46bf68784e4066115788d008e"
+checksum = "1e401f977ab385c9e4e3ab30627d6f26d00e2c73eef317493c4ec6d468726cf8"
 dependencies = [
  "cfg-if",
  "libc",
  "redox_syscall",
  "smallvec",
- "windows-targets 0.48.5",
+ "windows-targets 0.52.5",
 ]
 
 [[package]]
@@ -2038,11 +2033,11 @@ dependencies = [
 
 [[package]]
 name = "redox_syscall"
-version = "0.4.1"
+version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4722d768eff46b75989dd134e5c353f0d6296e5aaa3132e776cbdb56be7731aa"
+checksum = "469052894dcb553421e483e4209ee581a45100d31b4018de03e5a7ad86374a7e"
 dependencies = [
- "bitflags 1.3.2",
+ "bitflags 2.5.0",
 ]
 
 [[package]]
@@ -2182,9 +2177,9 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-version = "0.21.11"
+version = "0.21.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7fecbfb7b1444f477b345853b1fce097a2c6fb637b2bfb87e6bc5db0f043fae4"
+checksum = "3f56a14d1f48b391359b22f731fd4bd7e43c97f3c50eee276f3aa09c94784d3e"
 dependencies = [
  "log",
  "ring",
@@ -2324,11 +2319,10 @@ dependencies = [
 [[package]]
 name = "sep5"
 version = "0.0.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9afe34ccbd1fb6fa0b2fc7cccb037bd3d3f1e484c3befe1b713d7611884f336a"
+source = "git+https://github.com/shantanu-hashcash/rs-sep5?rev=9fc088dea5ea3fc7abf0ac14a7fd4fa6e6b47c0c#9fc088dea5ea3fc7abf0ac14a7fd4fa6e6b47c0c"
 dependencies = [
+ "hcnet-strkey 0.0.7",
  "slip10",
- "stellar-strkey",
  "thiserror",
  "tiny-bip39",
 ]
@@ -2518,7 +2512,7 @@ dependencies = [
 [[package]]
 name = "soroban-builtin-sdk-macros"
 version = "20.0.2"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=8a4dc8592154579e93a5e444871c54d1877f2fc2#8a4dc8592154579e93a5e444871c54d1877f2fc2"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=db02e3975e5deaa437adbeeb4c80931d17ca477c#db02e3975e5deaa437adbeeb4c80931d17ca477c"
 dependencies = [
  "itertools 0.11.0",
  "proc-macro2",
@@ -2544,8 +2538,8 @@ dependencies = [
  "dotenvy",
  "ed25519-dalek 2.0.0",
  "ethnum",
- "hcnet-strkey",
- "hcnet-xdr 20.0.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hcnet-strkey 0.0.7",
+ "hcnet-xdr",
  "heck 0.4.1",
  "hex",
  "http",
@@ -2593,12 +2587,12 @@ dependencies = [
 [[package]]
 name = "soroban-env-common"
 version = "20.0.2"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=8a4dc8592154579e93a5e444871c54d1877f2fc2#8a4dc8592154579e93a5e444871c54d1877f2fc2"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=db02e3975e5deaa437adbeeb4c80931d17ca477c#db02e3975e5deaa437adbeeb4c80931d17ca477c"
 dependencies = [
  "arbitrary",
  "crate-git-revision 0.0.6",
  "ethnum",
- "hcnet-xdr 20.0.22 (git+https://github.com/shantanu-hashcash/rs-hcnet-xdr?rev=5f70a8bd2e74f252a39ec735245ab27b63b6b915)",
+ "hcnet-xdr",
  "num-derive",
  "num-traits",
  "serde",
@@ -2610,7 +2604,7 @@ dependencies = [
 [[package]]
 name = "soroban-env-guest"
 version = "20.0.2"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=8a4dc8592154579e93a5e444871c54d1877f2fc2#8a4dc8592154579e93a5e444871c54d1877f2fc2"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=db02e3975e5deaa437adbeeb4c80931d17ca477c#db02e3975e5deaa437adbeeb4c80931d17ca477c"
 dependencies = [
  "soroban-env-common",
  "static_assertions",
@@ -2619,13 +2613,13 @@ dependencies = [
 [[package]]
 name = "soroban-env-host"
 version = "20.0.2"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=8a4dc8592154579e93a5e444871c54d1877f2fc2#8a4dc8592154579e93a5e444871c54d1877f2fc2"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=db02e3975e5deaa437adbeeb4c80931d17ca477c#db02e3975e5deaa437adbeeb4c80931d17ca477c"
 dependencies = [
  "backtrace",
  "curve25519-dalek 4.1.1",
  "ed25519-dalek 2.0.0",
  "getrandom",
- "hcnet-strkey",
+ "hcnet-strkey 0.0.8",
  "hex-literal",
  "hmac 0.12.1",
  "k256",
@@ -2645,9 +2639,9 @@ dependencies = [
 [[package]]
 name = "soroban-env-macros"
 version = "20.0.2"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=8a4dc8592154579e93a5e444871c54d1877f2fc2#8a4dc8592154579e93a5e444871c54d1877f2fc2"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-env?rev=db02e3975e5deaa437adbeeb4c80931d17ca477c#db02e3975e5deaa437adbeeb4c80931d17ca477c"
 dependencies = [
- "hcnet-xdr 20.0.22 (git+https://github.com/shantanu-hashcash/rs-hcnet-xdr?rev=5f70a8bd2e74f252a39ec735245ab27b63b6b915)",
+ "hcnet-xdr",
  "itertools 0.11.0",
  "proc-macro2",
  "quote",
@@ -2663,7 +2657,7 @@ version = "20.1.0"
 [[package]]
 name = "soroban-ledger-snapshot"
 version = "20.0.3"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=71b0e230be1c3298aa7080122949e249dd45bf08#71b0e230be1c3298aa7080122949e249dd45bf08"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=50161adc0ca9445d22a7c9d3f027a43a7a1d718e#50161adc0ca9445d22a7c9d3f027a43a7a1d718e"
 dependencies = [
  "serde",
  "serde_json",
@@ -2676,13 +2670,13 @@ dependencies = [
 [[package]]
 name = "soroban-sdk"
 version = "20.0.3"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=71b0e230be1c3298aa7080122949e249dd45bf08#71b0e230be1c3298aa7080122949e249dd45bf08"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=50161adc0ca9445d22a7c9d3f027a43a7a1d718e#50161adc0ca9445d22a7c9d3f027a43a7a1d718e"
 dependencies = [
  "arbitrary",
  "bytes-lit",
  "ctor",
  "ed25519-dalek 2.0.0",
- "hcnet-strkey",
+ "hcnet-strkey 0.0.8",
  "rand",
  "serde",
  "serde_json",
@@ -2695,11 +2689,11 @@ dependencies = [
 [[package]]
 name = "soroban-sdk-macros"
 version = "20.0.3"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=71b0e230be1c3298aa7080122949e249dd45bf08#71b0e230be1c3298aa7080122949e249dd45bf08"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=50161adc0ca9445d22a7c9d3f027a43a7a1d718e#50161adc0ca9445d22a7c9d3f027a43a7a1d718e"
 dependencies = [
  "crate-git-revision 0.0.6",
  "darling",
- "hcnet-xdr 20.0.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hcnet-xdr",
  "itertools 0.11.0",
  "proc-macro2",
  "quote",
@@ -2714,10 +2708,10 @@ dependencies = [
 [[package]]
 name = "soroban-spec"
 version = "20.0.3"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=71b0e230be1c3298aa7080122949e249dd45bf08#71b0e230be1c3298aa7080122949e249dd45bf08"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=50161adc0ca9445d22a7c9d3f027a43a7a1d718e#50161adc0ca9445d22a7c9d3f027a43a7a1d718e"
 dependencies = [
  "base64 0.13.1",
- "hcnet-xdr 20.0.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hcnet-xdr",
  "thiserror",
  "wasmparser 0.88.0",
 ]
@@ -2726,7 +2720,7 @@ dependencies = [
 name = "soroban-spec-json"
 version = "20.1.0"
 dependencies = [
- "hcnet-xdr 20.0.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hcnet-xdr",
  "pretty_assertions",
  "serde",
  "serde_derive",
@@ -2739,9 +2733,9 @@ dependencies = [
 [[package]]
 name = "soroban-spec-rust"
 version = "20.0.3"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=71b0e230be1c3298aa7080122949e249dd45bf08#71b0e230be1c3298aa7080122949e249dd45bf08"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=50161adc0ca9445d22a7c9d3f027a43a7a1d718e#50161adc0ca9445d22a7c9d3f027a43a7a1d718e"
 dependencies = [
- "hcnet-xdr 20.0.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hcnet-xdr",
  "prettyplease",
  "proc-macro2",
  "quote",
@@ -2757,8 +2751,8 @@ version = "20.1.0"
 dependencies = [
  "base64 0.21.7",
  "ethnum",
- "hcnet-strkey",
- "hcnet-xdr 20.0.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hcnet-strkey 0.0.7",
+ "hcnet-xdr",
  "hex",
  "itertools 0.10.5",
  "serde_json",
@@ -2774,7 +2768,7 @@ name = "soroban-spec-typescript"
 version = "20.1.0"
 dependencies = [
  "base64 0.21.7",
- "hcnet-xdr 20.0.22 (registry+https://github.com/rust-lang/crates.io-index)",
+ "hcnet-xdr",
  "heck 0.4.1",
  "include_dir",
  "itertools 0.10.5",
@@ -2797,7 +2791,7 @@ dependencies = [
  "assert_cmd",
  "assert_fs",
  "fs_extra",
- "hcnet-strkey",
+ "hcnet-strkey 0.0.7",
  "predicates 2.1.5",
  "sep5",
  "serde_json",
@@ -2816,7 +2810,7 @@ dependencies = [
 [[package]]
 name = "soroban-token-sdk"
 version = "20.0.3"
-source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=71b0e230be1c3298aa7080122949e249dd45bf08#71b0e230be1c3298aa7080122949e249dd45bf08"
+source = "git+https://github.com/shantanu-hashcash/rs-soroban-sdk?rev=50161adc0ca9445d22a7c9d3f027a43a7a1d718e#50161adc0ca9445d22a7c9d3f027a43a7a1d718e"
 dependencies = [
  "soroban-sdk",
 ]
@@ -2824,7 +2818,7 @@ dependencies = [
 [[package]]
 name = "soroban-wasmi"
 version = "0.31.1-soroban.20.0.0"
-source = "git+https://github.com/shantanu-hashcash/wasmi?rev=a5b00c611cc47be221c65b3906d29ba850bd66f9#a5b00c611cc47be221c65b3906d29ba850bd66f9"
+source = "git+https://github.com/shantanu-hashcash/wasmi?rev=fdb7504c315c59a338205a2d2a3b32247456a555#fdb7504c315c59a338205a2d2a3b32247456a555"
 dependencies = [
  "smallvec",
  "spin",
@@ -2854,16 +2848,6 @@ name = "static_assertions"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
-
-[[package]]
-name = "stellar-strkey"
-version = "0.0.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c0689070126ca7f2effc2c5726584446db52190f0cef043c02eb4040a711c11"
-dependencies = [
- "base32",
- "thiserror",
-]
 
 [[package]]
 name = "strsim"
@@ -3489,12 +3473,12 @@ dependencies = [
 [[package]]
 name = "wasmi_arena"
 version = "0.4.0"
-source = "git+https://github.com/shantanu-hashcash/wasmi?rev=a5b00c611cc47be221c65b3906d29ba850bd66f9#a5b00c611cc47be221c65b3906d29ba850bd66f9"
+source = "git+https://github.com/shantanu-hashcash/wasmi?rev=fdb7504c315c59a338205a2d2a3b32247456a555#fdb7504c315c59a338205a2d2a3b32247456a555"
 
 [[package]]
 name = "wasmi_core"
 version = "0.13.0"
-source = "git+https://github.com/shantanu-hashcash/wasmi?rev=a5b00c611cc47be221c65b3906d29ba850bd66f9#a5b00c611cc47be221c65b3906d29ba850bd66f9"
+source = "git+https://github.com/shantanu-hashcash/wasmi?rev=fdb7504c315c59a338205a2d2a3b32247456a555#fdb7504c315c59a338205a2d2a3b32247456a555"
 dependencies = [
  "downcast-rs",
  "libm",
